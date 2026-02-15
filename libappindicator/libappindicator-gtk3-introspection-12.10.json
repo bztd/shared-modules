@@ -139,6 +139,15 @@
           "dest-filename": "autogen.sh"
         }
       ]
-    }
+    },
+    {
+	  "name": "gtkdocize-fake",
+      "buildsystem": "simple",
+      "build-commands": [
+          "touch gtkdocize",
+          "install -Dm755 gtkdocize -t /app/bin/"
+      ],
+      "cleanup": ["*"]
+	  }
   ]
 }
